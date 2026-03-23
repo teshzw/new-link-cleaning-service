@@ -1,13 +1,34 @@
 import "./index.css";
 
 const SERVICES = [
-  "Office Cleaning",
-  "Commercial Cleaning",
-  "Condominium Cleaning",
-  "Post-Construction Cleaning",
-  "Move-In / Move-Out Cleaning",
-  "Floor Care",
-  "Customized Cleaning Plans",
+  {
+    title: "Office Cleaning",
+    desc: "Daily and scheduled cleaning to keep offices clean, organized, and productive.",
+  },
+  {
+    title: "Commercial Cleaning",
+    desc: "Reliable cleaning solutions for businesses, retail spaces, and commercial buildings.",
+  },
+  {
+    title: "Condominium Cleaning",
+    desc: "Specialized cleaning for condos, including common areas, lobbies, and hallways.",
+  },
+  {
+    title: "Post-Construction Cleaning",
+    desc: "Thorough cleaning after construction to remove dust, debris, and residues.",
+  },
+  {
+    title: "Move-In / Move-Out Cleaning",
+    desc: "Deep cleaning services to prepare homes for new occupants or after moving out.",
+  },
+  {
+    title: "Floor Care",
+    desc: "Professional floor maintenance including sweeping, mopping, polishing, and waxing.",
+  },
+  {
+    title: "Customized Cleaning Plans",
+    desc: "Flexible cleaning plans tailored to your specific needs and schedule.",
+  },
 ];
 
 const CONTACT = {
@@ -16,164 +37,165 @@ const CONTACT = {
   email: "kert.roach74@gmail.com",
 };
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80";
+const HERO_IMAGE2 = "/images/cleaner1.png";
+const HERO_IMAGE3 = "/images/cleaner2.png";
+const HERO_IMAGE4 = "/images/cleaner4.png";
+const HERO_IMAGE5 = "/images/cleaner5.png";
 
 export default function App() {
   return (
-    <div
-      style={{
-        fontFamily: "Arial, sans-serif",
-        maxWidth: "1200px", 
-        width: "100%", 
-        margin: "0 auto",
-        padding: "24px",
-        color: "#222",
-        lineHeight: 1.5,
-        backgroundColor: "#ffffff",
-      }}
-    >
-      <header
-        style={{
-          marginBottom: "32px",
-          borderBottom: "1px solid #ddd",
-          paddingBottom: "16px",
-        }}
-      >
-        <h1 style={{ margin: 0, color: "#1d4ed8" }}>New Link Cleaning Service</h1>
-        <p style={{ margin: "8px 0 0", color: "#ea580c" }}>Clean • Fresh • Professional</p>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px" }}>
+
+      {/* HEADER */}
+      <header style={{ marginBottom: "30px" }}>
+        <h1 style={{ color: "#1d4ed8" }}>New Link Cleaning Service</h1>
+        <p style={{ color: "#ea580c" }}>
+          Clean • Reliable • Professional
+        </p>
       </header>
 
+      {/* HERO */}
       <section
         style={{
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: "24px",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "30px",
+          alignItems: "center",
           marginBottom: "40px",
         }}
       >
-        <div>
-          <p
-            style={{
-              display: "inline-block",
-              background: "#ffedd5",
-              color: "#c2410c",
-              padding: "6px 12px",
-              borderRadius: "999px",
-              fontSize: "14px",
-              marginBottom: "16px",
-            }}
-          >
-            Professional Cleaning Services in Ontario
-          </p>
-
-          <h2 style={{ fontSize: "40px", margin: "0 0 16px", color: "#1f2937" }}>
+        <div style={{ flex: 1, minWidth: "280px" }}>
+          <h2 style={{ fontSize: "clamp(24px, 5vw, 40px)" }}>
             Trusted cleaning solutions for condominiums and commercial spaces
           </h2>
 
-          <p style={{ fontSize: "18px", color: "#4b5563", maxWidth: "700px" }}>
-            Led by {CONTACT.owner}, New Link Cleaning Service brings over 20 years of hands-on
-            experience in condominium and commercial cleaning, delivering reliable and high-quality
-            results every time.
+          <p style={{ color: "#4b5563" }}>
+            Led by {CONTACT.owner}, New Link Cleaning Service brings over 20 years of experience
+            delivering reliable, high-quality cleaning services tailored to your needs.
           </p>
+
+          <div style={{ textAlign: "center", marginTop: "20px" }}>
+            <img
+              src={HERO_IMAGE4}
+              style={{
+                width: "100%",
+                maxWidth: "350px",
+                borderRadius: "12px",
+              }}
+            />
+          </div>
         </div>
 
-        <div>
+        <div style={{ flex: 1, minWidth: "280px" }}>
           <img
-            src={HERO_IMAGE}
-            alt="Professional cleaner mopping a floor"
+            src={HERO_IMAGE2}
             style={{
               width: "100%",
-              maxHeight: "360px",
-              objectFit: "cover",
-              borderRadius: "18px",
+              maxWidth: "350px",
+              borderRadius: "12px",
               display: "block",
-              marginBottom: "20px",
+              margin: "0 auto 20px",
             }}
           />
 
-          <div
-            style={{
-              background: "#f9fafb",
-              border: "1px solid #e5e7eb",
-              borderRadius: "18px",
-              padding: "20px",
-            }}
-          >
-            <h3 style={{ marginTop: 0, color: "#1d4ed8" }}>Why Clients Choose Us</h3>
-            <ul style={{ paddingLeft: "20px", marginBottom: 0 }}>
+          <div style={{ background: "#f9fafb", padding: "20px", borderRadius: "12px" }}>
+            <h3 style={{ color: "#1d4ed8" }}>Why Clients Choose Us</h3>
+            <ul>
               <li>20+ years of experience</li>
               <li>Condominium specialist</li>
               <li>Reliable and detail-oriented service</li>
-              <li>Professional communication and scheduling</li>
+              <li>Professional communication</li>
             </ul>
           </div>
         </div>
       </section>
 
+      {/* SERVICES */}
       <section style={{ marginBottom: "40px" }}>
         <h2 style={{ color: "#1d4ed8" }}>Our Services</h2>
+
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "16px",
-            marginTop: "16px",
+            gap: "20px",
           }}
         >
           {SERVICES.map((service) => (
             <div
-              key={service}
+              key={service.title}
               style={{
-                border: "1px solid #dbeafe",
-                borderRadius: "16px",
-                padding: "18px",
+                padding: "16px",
                 background: "#eff6ff",
+                borderRadius: "12px",
               }}
             >
-              <h3 style={{ marginTop: 0, color: "#1d4ed8", fontSize: "18px" }}>{service}</h3>
-              <p style={{ marginBottom: 0, color: "#4b5563" }}>
-                High-quality cleaning tailored to your business needs and property type.
-              </p>
+              <h3 style={{ color: "#1d4ed8" }}>{service.title}</h3>
+              <p style={{ color: "#4b5563" }}>{service.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section style={{ marginBottom: "40px" }}>
+      {/* ABOUT */}
+      <section style={{ marginBottom: "50px" }}>
         <h2 style={{ color: "#1d4ed8" }}>About Kert Roach</h2>
-        <p style={{ color: "#4b5563", maxWidth: "800px" }}>
-          Kert Roach is an experienced cleaning professional with more than 20 years of expertise,
-          especially in condominium and commercial cleaning. His commitment to quality, reliability,
-          and client satisfaction makes New Link Cleaning Service a trusted choice for property
-          managers and businesses.
-        </p>
-      </section>
 
-      <section style={{ marginBottom: "40px" }}>
-        <h2 style={{ color: "#ea580c" }}>Contact Us</h2>
+        <p style={{ color: "#4b5563", lineHeight: 1.7 }}>
+          Kert Roach is a highly experienced cleaning professional with over 20 years of expertise
+          in condominium and commercial cleaning services across Ontario.
+        </p>
+
+        <p style={{ color: "#4b5563", lineHeight: 1.7 }}>
+          He actively leads and supervises cleaning operations, ensuring that every team member
+          performs their work according to professional standards and customer requirements.
+        </p>
+
+        <p style={{ color: "#4b5563", lineHeight: 1.7 }}>
+          His leadership ensures consistent quality, efficient service delivery, and clean,
+          safe environments for all clients.
+        </p>
+
         <div
           style={{
-            border: "1px solid #e5e7eb",
-            borderRadius: "16px",
+            background: "#eff6ff",
             padding: "20px",
-            background: "#fff7ed",
-            maxWidth: "500px",
+            borderRadius: "12px",
+            marginTop: "20px",
           }}
         >
-          <p>
-            <strong>Owner:</strong> {CONTACT.owner}
-          </p>
-          <p>
-            <strong>Phone:</strong> <a href={`tel:${CONTACT.phone}`}>{CONTACT.phone}</a>
-          </p>
-          <p>
-            <strong>Email:</strong> <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-          </p>
+          ✔ 20+ Years Experience <br />
+          ✔ Condominium & Commercial Specialist <br />
+          ✔ Strong Team Leadership <br />
+          ✔ Customer-Focused Service
         </div>
       </section>
 
-      <footer style={{ borderTop: "1px solid #ddd", paddingTop: "16px", color: "#6b7280" }}>
+      {/* IMAGE ROW */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          flexWrap: "wrap",
+          marginBottom: "40px",
+        }}
+      >
+        <img src={HERO_IMAGE3} style={{ width: "100%", maxWidth: "300px", borderRadius: "12px" }} />
+        <img src={HERO_IMAGE5} style={{ width: "100%", maxWidth: "200px", borderRadius: "12px" }} />
+      </div>
+
+      {/* CONTACT */}
+      <section style={{ marginBottom: "40px" }}>
+        <h2 style={{ color: "#ea580c" }}>Contact</h2>
+
+        <p><strong>{CONTACT.owner}</strong></p>
+        <p><a href={`tel:${CONTACT.phone}`}>{CONTACT.phone}</a></p>
+        <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{ textAlign: "center", color: "#888" }}>
         © 2026 New Link Cleaning Service
       </footer>
     </div>
