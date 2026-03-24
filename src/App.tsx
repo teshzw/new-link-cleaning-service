@@ -38,15 +38,11 @@ const CONTACT = {
 };
 
 const HERO_IMAGE2 = "/images/cleaner1.png";
-const HERO_IMAGE3 = "/images/cleaner2.png";
 const HERO_IMAGE4 = "/images/cleaner4.png";
-const HERO_IMAGE5 = "/images/cleaner5.png";
 
-/* 🔥 FLOATING BUTTONS */
 function FloatingButtons() {
   return (
     <>
-      {/* WhatsApp */}
       <a
         href="https://wa.me/16475687520?text=Hello%20I%20need%20cleaning%20service"
         target="_blank"
@@ -65,10 +61,9 @@ function FloatingButtons() {
           zIndex: 1000,
         }}
       >
-        💬 WhatsApp
+        WhatsApp
       </a>
 
-      {/* Call */}
       <a
         href="tel:+16475687520"
         style={{
@@ -85,7 +80,7 @@ function FloatingButtons() {
           zIndex: 1000,
         }}
       >
-        📞 Call Now
+        Call Now
       </a>
     </>
   );
@@ -103,7 +98,6 @@ export default function App() {
         overflowX: "hidden",
       }}
     >
-      {/* HEADER */}
       <header style={{ marginBottom: "24px" }}>
         <h1 style={{ color: "#1d4ed8", marginBottom: "6px" }}>
           New Link Cleaning Service
@@ -113,7 +107,6 @@ export default function App() {
         </p>
       </header>
 
-      {/* HERO */}
       <section
         style={{
           display: "flex",
@@ -129,19 +122,45 @@ export default function App() {
           </h2>
 
           <p style={{ color: "#4b5563" }}>
-            Led by {CONTACT.owner}, New Link Cleaning Service brings over 20 years of experience delivering reliable, high-quality cleaning services tailored to your needs.
+            Led by {CONTACT.owner}, New Link Cleaning Service brings over 20
+            years of experience delivering reliable, high-quality cleaning
+            services tailored to your needs.
           </p>
 
           <div style={{ textAlign: "center", marginTop: "16px" }}>
-            <img src={HERO_IMAGE4} style={{ width: "100%", maxWidth: "320px", borderRadius: "12px" }} />
+            <img
+              src={HERO_IMAGE4}
+              alt="Cleaning team member"
+              style={{
+                width: "100%",
+                maxWidth: "320px",
+                borderRadius: "12px",
+              }}
+            />
           </div>
         </div>
 
         <div style={{ flex: 1, minWidth: "260px" }}>
-          <img src={HERO_IMAGE2} style={{ width: "100%", borderRadius: "12px", marginBottom: "16px" }} />
+          <img
+            src={HERO_IMAGE2}
+            alt="Professional cleaning service"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              marginBottom: "16px",
+            }}
+          />
 
-          <div style={{ background: "#f9fafb", padding: "16px", borderRadius: "12px" }}>
-            <h3 style={{ color: "#1d4ed8", marginTop: 0 }}>Why Clients Choose Us</h3>
+          <div
+            style={{
+              background: "#f9fafb",
+              padding: "16px",
+              borderRadius: "12px",
+            }}
+          >
+            <h3 style={{ color: "#1d4ed8", marginTop: 0 }}>
+              Why Clients Choose Us
+            </h3>
             <ul style={{ paddingLeft: "18px", margin: 0 }}>
               <li>20+ years of experience</li>
               <li>Condominium specialist</li>
@@ -152,55 +171,75 @@ export default function App() {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section style={{ marginBottom: "40px" }}>
         <h2 style={{ color: "#1d4ed8" }}>Our Services</h2>
 
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "16px",
-        }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "16px",
+          }}
+        >
           {SERVICES.map((service) => (
-            <div key={service.title} style={{ padding: "14px", background: "#eff6ff", borderRadius: "12px" }}>
-              <h3 style={{ color: "#1d4ed8", marginTop: 0 }}>{service.title}</h3>
-              <p style={{ color: "#4b5563", marginBottom: 0 }}>{service.desc}</p>
+            <div
+              key={service.title}
+              style={{
+                padding: "14px",
+                background: "#eff6ff",
+                borderRadius: "12px",
+              }}
+            >
+              <h3 style={{ color: "#1d4ed8", marginTop: 0 }}>
+                {service.title}
+              </h3>
+              <p style={{ color: "#4b5563", marginBottom: 0 }}>
+                {service.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ABOUT */}
       <section style={{ marginBottom: "40px" }}>
         <h2 style={{ color: "#1d4ed8" }}>About Kert Roach</h2>
 
         <p style={{ color: "#4b5563" }}>
-          Kert Roach is a highly experienced cleaning professional with over 20 years of expertise in condominium and commercial cleaning services across Ontario.
+          Kert Roach is a highly experienced cleaning professional with over 20
+          years of expertise in condominium and commercial cleaning services
+          across Ontario.
         </p>
 
         <p style={{ color: "#4b5563" }}>
-          He actively leads and supervises cleaning operations, ensuring that every team member performs their work according to professional standards and customer requirements.
+          He actively leads and supervises cleaning operations, ensuring that
+          every team member performs their work according to professional
+          standards and customer requirements.
         </p>
 
         <p style={{ color: "#4b5563" }}>
-          His leadership ensures consistent quality, efficient service delivery, and clean, safe environments for all clients.
+          His leadership ensures consistent quality, efficient service delivery,
+          and clean, safe environments for all clients.
         </p>
       </section>
 
-      {/* CONTACT */}
       <section style={{ marginBottom: "40px" }}>
         <h2 style={{ color: "#ea580c" }}>Contact</h2>
 
-        <p><strong>{CONTACT.owner}</strong></p>
-        <p><a href={`tel:${CONTACT.phone}`}>(647) 568-7520</a></p>
-        <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+        <p>
+          <strong>{CONTACT.owner}</strong>
+        </p>
+        <p>
+          <a href={`tel:${CONTACT.phone}`}>(647) 568-7520</a>
+        </p>
+        <p>
+          <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+        </p>
       </section>
 
       <footer style={{ textAlign: "center", color: "#888" }}>
         © 2026 New Link Cleaning Service
       </footer>
 
-      {/* 🔥 FLOATING BUTTONS */}
       <FloatingButtons />
     </div>
   );
