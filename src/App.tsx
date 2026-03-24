@@ -24,7 +24,12 @@ const HERO_IMAGE2 = "/images/cleaner4.png";
 function FloatingButtons() {
   return (
     <>
-      <a href="https://wa.me/16475687520" target="_blank" style={btnStyle("#25D366", "78px")}>
+      <a
+        href="https://wa.me/16475687520"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={btnStyle("#25D366", "78px")}
+      >
         💬 WhatsApp
       </a>
       <a href="tel:+16475687520" style={btnStyle("#007BFF", "18px")}>
@@ -35,7 +40,7 @@ function FloatingButtons() {
 }
 
 const btnStyle = (bg: string, bottom: string) => ({
-  position: "fixed",
+  position: "fixed" as const,
   bottom,
   right: "16px",
   backgroundColor: bg,
@@ -52,17 +57,20 @@ const btnStyle = (bg: string, bottom: string) => ({
 export default function App() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", overflowX: "hidden" }}>
-
       {/* HEADER */}
       <header style={{ padding: "20px 16px", borderBottom: "1px solid #eee" }}>
         <div style={containerFlex}>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <img src={LOGO} style={{ width: "70px", borderRadius: "10px" }} />
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+            <img
+              src={LOGO}
+              alt="New Link Cleaning Service logo"
+              style={{ width: "70px", borderRadius: "10px" }}
+            />
             <div>
-              <h1 style={{ color: "#1d4ed8", fontSize: "clamp(24px,4vw,34px)" }}>
+              <h1 style={{ color: "#1d4ed8", fontSize: "clamp(24px,4vw,34px)", margin: 0 }}>
                 New Link Cleaning Service
               </h1>
-              <p style={{ color: "#ea580c", fontSize: "14px" }}>
+              <p style={{ color: "#ea580c", fontSize: "14px", margin: "4px 0 0 0" }}>
                 Clean • Reliable • Professional
               </p>
             </div>
@@ -78,7 +86,7 @@ export default function App() {
       <section style={section}>
         <div style={containerFlex}>
           <div style={{ flex: 1, maxWidth: "500px" }}>
-            <h2 style={{ fontSize: "clamp(24px,5vw,38px)" }}>
+            <h2 style={{ fontSize: "clamp(24px,5vw,38px)", marginTop: 0 }}>
               Trusted cleaning solutions for condominiums and commercial spaces
             </h2>
             <p style={text}>
@@ -93,7 +101,7 @@ export default function App() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
             {[HERO_IMAGE1, HERO_IMAGE2].map((img) => (
-              <img key={img} src={img} style={heroImg} />
+              <img key={img} src={img} alt="Cleaning service" style={heroImg} />
             ))}
           </div>
         </div>
@@ -102,8 +110,8 @@ export default function App() {
       {/* WHY */}
       <section style={section}>
         <div style={cardBox}>
-          <h2 style={{ color: "#1d4ed8" }}>Why Clients Choose Us</h2>
-          <ul>
+          <h2 style={{ color: "#1d4ed8", marginTop: 0 }}>Why Clients Choose Us</h2>
+          <ul style={{ margin: 0, paddingLeft: "20px", lineHeight: 1.8 }}>
             <li>20+ years experience</li>
             <li>Condominium specialist</li>
             <li>Reliable & detailed service</li>
@@ -114,13 +122,13 @@ export default function App() {
 
       {/* SERVICES */}
       <section style={section}>
-        <h2 style={{ textAlign: "center", color: "#1d4ed8" }}>Our Services</h2>
+        <h2 style={{ textAlign: "center", color: "#1d4ed8", marginTop: 0 }}>Our Services</h2>
 
         <div style={grid}>
           {SERVICES.map((s) => (
             <div key={s.title} className="card" style={serviceCard}>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
+              <h3 style={{ marginTop: 0 }}>{s.title}</h3>
+              <p style={{ marginBottom: 0 }}>{s.desc}</p>
             </div>
           ))}
         </div>
@@ -128,26 +136,56 @@ export default function App() {
 
       {/* BOOKING */}
       <section style={section}>
-        <h2 style={{ textAlign: "center", color: "#1d4ed8" }}>Book a Cleaning Service</h2>
+        <h2 style={{ textAlign: "center", color: "#1d4ed8", marginTop: 0 }}>
+          Book a Cleaning Service
+        </h2>
 
-        <form action="https://formsubmit.co/info@newlinkcleaning.com" method="POST" style={form}>
+        <p style={{ textAlign: "center", color: "#555", marginBottom: "10px" }}>
+          Monday – Saturday: 8:00 AM – 6:00 PM <br />
+          Sunday: Closed
+        </p>
+
+        <form
+          action="https://formsubmit.co/info@newlinkcleaning.com"
+          method="POST"
+          style={form}
+        >
+          <input type="hidden" name="_subject" value="New Booking Request" />
+          <input type="hidden" name="_captcha" value="false" />
+
           <input name="name" placeholder="Name" required />
           <input name="phone" placeholder="Phone" required />
-          <select name="service">
-            <option>Select Service</option>
-            {SERVICES.map(s => <option key={s.title}>{s.title}</option>)}
+          <input type="date" name="date" required />
+          <input type="time" name="time" required />
+
+          <select name="service" required>
+            <option value="">Select Service</option>
+            {SERVICES.map((s) => (
+              <option key={s.title}>{s.title}</option>
+            ))}
           </select>
-          <textarea name="message" placeholder="Details..." />
-          <button type="submit" style={submitBtn}>Submit</button>
+
+          <select name="schedule">
+            <option value="">Preferred Time</option>
+            <option>Morning (8 AM – 12 PM)</option>
+            <option>Afternoon (12 PM – 4 PM)</option>
+            <option>Evening (4 PM – 6 PM)</option>
+          </select>
+
+          <textarea name="message" placeholder="Details..." rows={4} />
+
+          <button type="submit" style={submitBtn}>
+            Submit
+          </button>
         </form>
       </section>
 
       {/* CONTACT */}
       <section style={section}>
-        <h2 style={{ color: "#ea580c", textAlign: "center" }}>Contact Us</h2>
-        <p style={{ textAlign: "center" }}>{CONTACT.owner}</p>
-        <p style={{ textAlign: "center" }}>{CONTACT.phone}</p>
-        <p style={{ textAlign: "center" }}>{CONTACT.email}</p>
+        <h2 style={{ color: "#ea580c", textAlign: "center", marginTop: 0 }}>Contact Us</h2>
+        <p style={{ textAlign: "center", margin: "6px 0" }}>{CONTACT.owner}</p>
+        <p style={{ textAlign: "center", margin: "6px 0" }}>{CONTACT.phone}</p>
+        <p style={{ textAlign: "center", margin: "6px 0" }}>{CONTACT.email}</p>
       </section>
 
       <footer style={{ textAlign: "center", padding: "20px" }}>
@@ -166,13 +204,13 @@ const containerFlex = {
   maxWidth: "1100px",
   margin: "0 auto",
   display: "flex",
-  flexWrap: "wrap",
+  flexWrap: "wrap" as const,
   justifyContent: "space-between",
   alignItems: "center",
   gap: "20px",
 };
 
-const text = { color: "#555", margin: "15px 0" };
+const text = { color: "#555", margin: "15px 0", lineHeight: 1.6 };
 
 const heroImg = {
   width: "100%",
@@ -205,7 +243,7 @@ const form = {
   maxWidth: "400px",
   margin: "20px auto",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "column" as const,
   gap: "10px",
 };
 
@@ -215,6 +253,7 @@ const submitBtn = {
   padding: "12px",
   borderRadius: "8px",
   border: "none",
+  cursor: "pointer",
 };
 
 const callBtn = {
@@ -222,6 +261,7 @@ const callBtn = {
   color: "white",
   padding: "10px 14px",
   borderRadius: "20px",
+  textDecoration: "none",
 };
 
 const waBtn = {
@@ -229,4 +269,5 @@ const waBtn = {
   color: "white",
   padding: "10px 14px",
   borderRadius: "20px",
+  textDecoration: "none",
 };
