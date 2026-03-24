@@ -37,9 +37,9 @@ const CONTACT = {
   email: "info@newlinkcleaning.com",
 };
 
+const LOGO = "/images/logo.png";
 const HERO_IMAGE1 = "/images/cleaner1.png";
 const HERO_IMAGE2 = "/images/cleaner4.png";
-const LOGO = "/images/logo.png";
 
 function FloatingButtons() {
   return (
@@ -114,10 +114,10 @@ export default function App() {
             maxWidth: "1200px",
             margin: "0 auto",
             display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
             justifyContent: "space-between",
-            gap: "16px",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "10px",
           }}
         >
           <div
@@ -125,6 +125,7 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               gap: "12px",
+              flexWrap: "wrap",
             }}
           >
             <img
@@ -143,7 +144,7 @@ export default function App() {
                 style={{
                   margin: 0,
                   color: "#1d4ed8",
-                  fontSize: "clamp(24px, 4vw, 34px)",
+                  fontSize: "clamp(26px, 4vw, 36px)",
                   lineHeight: 1.1,
                 }}
               >
@@ -188,19 +189,19 @@ export default function App() {
       >
         <div
           style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
-            gap: "28px",
+            gap: "30px",
+            maxWidth: "1200px",
+            margin: "0 auto",
           }}
         >
           <div
             style={{
-              flex: "1 1 340px",
-              maxWidth: "520px",
+              flex: "1 1 320px",
+              maxWidth: "500px",
             }}
           >
             <h2
@@ -217,7 +218,7 @@ export default function App() {
             <p
               style={{
                 color: "#4b5563",
-                marginTop: "0",
+                marginTop: 0,
                 marginBottom: "20px",
                 fontSize: "16px",
                 lineHeight: 1.6,
@@ -269,10 +270,10 @@ export default function App() {
 
           <div
             style={{
-              flex: "1 1 320px",
+              flex: "1 1 300px",
               display: "flex",
               flexDirection: "column",
-              gap: "14px",
+              gap: "16px",
               alignItems: "center",
             }}
           >
@@ -281,10 +282,10 @@ export default function App() {
               alt="Professional cleaner working"
               style={{
                 width: "100%",
-                maxWidth: "360px",
+                maxWidth: "320px",
                 height: "auto",
-                objectFit: "cover",
                 borderRadius: "14px",
+                objectFit: "cover",
                 boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
               }}
             />
@@ -293,10 +294,10 @@ export default function App() {
               alt="Cleaning service in action"
               style={{
                 width: "100%",
-                maxWidth: "360px",
+                maxWidth: "320px",
                 height: "auto",
-                objectFit: "cover",
                 borderRadius: "14px",
+                objectFit: "cover",
                 boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
               }}
             />
