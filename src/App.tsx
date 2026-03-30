@@ -68,7 +68,7 @@ export default function App() {
               Email
             </a>
             <a
-              href="https://privatemail.com"
+              href="https://privateemail.com"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
@@ -192,7 +192,7 @@ export default function App() {
             </a>
 
             <a
-              href="https://privatemail.com"
+              href="https://privateemail.com"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-slate-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800"
@@ -291,7 +291,7 @@ export default function App() {
           Email
         </a>
         <a
-          href="https://privatemail.com"
+          href="https://privateemail.com"
           target="_blank"
           rel="noreferrer"
           className="rounded-full bg-slate-800 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-black"
