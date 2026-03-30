@@ -36,7 +36,7 @@ const reasons = [
   "Professional communication",
 ];
 
-export default function NewLinkCleaningCompactLayout() {
+export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
@@ -48,7 +48,7 @@ export default function NewLinkCleaningCompactLayout() {
             <p className="text-xs text-orange-500">Clean • Fresh • Professional</p>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <a
               href="#booking"
               className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
@@ -56,10 +56,24 @@ export default function NewLinkCleaningCompactLayout() {
               Book Now
             </a>
             <a
-              href="tel:+14167997692"
-              className="hidden rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-50 sm:inline-flex"
+              href="tel:+16475687520"
+              className="rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-50"
             >
-              Call Now
+              Call
+            </a>
+            <a
+              href="mailto:info@newlinkcleaning.com"
+              className="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-600"
+            >
+              Email
+            </a>
+            <a
+              href="https://privatemail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+            >
+              Open Mailbox
             </a>
           </div>
         </div>
@@ -86,10 +100,16 @@ export default function NewLinkCleaningCompactLayout() {
                 Book by Form
               </a>
               <a
-                href="https://wa.me/14167997692"
+                href="https://wa.me/16475687520"
                 className="rounded-full bg-green-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-green-600"
               >
                 WhatsApp
+              </a>
+              <a
+                href="mailto:info@newlinkcleaning.com"
+                className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600"
+              >
+                Email Us
               </a>
             </div>
 
@@ -140,6 +160,45 @@ export default function NewLinkCleaningCompactLayout() {
                 <p className="mt-2 text-sm leading-6 text-slate-600">{service.desc}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-4xl px-4 py-10 text-center">
+          <h3 className="text-2xl font-bold text-blue-700">Contact Us</h3>
+
+          <p className="mt-4 text-sm text-slate-600">
+            Phone:{" "}
+            <a href="tel:+16475687520" className="font-semibold text-blue-600">
+              647-568-7520
+            </a>
+          </p>
+
+          <p className="mt-2 text-sm text-slate-600">
+            Email:{" "}
+            <a
+              href="mailto:info@newlinkcleaning.com"
+              className="font-semibold text-blue-600"
+            >
+              info@newlinkcleaning.com
+            </a>
+          </p>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a
+              href="mailto:info@newlinkcleaning.com"
+              className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700"
+            >
+              Send Email
+            </a>
+
+            <a
+              href="https://privatemail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-slate-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800"
+            >
+              Open Mailbox
+            </a>
           </div>
         </section>
 
@@ -214,16 +273,30 @@ export default function NewLinkCleaningCompactLayout() {
 
       <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-3">
         <a
-          href="https://wa.me/14167997692"
+          href="https://wa.me/16475687520"
           className="rounded-full bg-green-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-600"
         >
           WhatsApp
         </a>
         <a
-          href="tel:+14167997692"
+          href="tel:+16475687520"
           className="rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700"
         >
-          Call Now
+          Call
+        </a>
+        <a
+          href="mailto:info@newlinkcleaning.com"
+          className="rounded-full bg-orange-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-orange-600"
+        >
+          Email
+        </a>
+        <a
+          href="https://privatemail.com"
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full bg-slate-800 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-black"
+        >
+          Mailbox
         </a>
       </div>
     </div>
