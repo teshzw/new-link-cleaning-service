@@ -68,7 +68,7 @@ export default function App() {
               Email
             </a>
             <a
-              href="https://privatemail.com"
+              href="https://privateemail.com"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
@@ -192,7 +192,7 @@ export default function App() {
             </a>
 
             <a
-              href="https://privatemail.com"
+              href="https://privateemail.com"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-slate-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800"
@@ -213,92 +213,19 @@ export default function App() {
 
             <form className="mt-6 grid gap-4">
               <div className="grid gap-4 sm:grid-cols-2">
-                <input
-                  type="text"
-                  placeholder="Full name"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone number"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
+                <input type="text" placeholder="Full name" className="w-full rounded-xl border px-4 py-3" />
+                <input type="tel" placeholder="Phone number" className="w-full rounded-xl border px-4 py-3" />
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                <input
-                  type="date"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-                <input
-                  type="time"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-              </div>
+              <textarea placeholder="Additional details" className="w-full rounded-xl border px-4 py-3" />
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                <select className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500">
-                  <option>Select service</option>
-                  <option>Office Cleaning</option>
-                  <option>Commercial Cleaning</option>
-                  <option>Condominium Cleaning</option>
-                  <option>Post-Construction Cleaning</option>
-                  <option>Move-In / Move-Out Cleaning</option>
-                  <option>Floor Care</option>
-                  <option>Customized Cleaning Plans</option>
-                </select>
-                <input
-                  type="text"
-                  placeholder="Address"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-              </div>
-
-              <textarea
-                placeholder="Additional details"
-                rows={5}
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-              />
-
-              <button
-                type="submit"
-                className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-              >
+              <button className="rounded-xl bg-blue-600 px-5 py-3 text-white">
                 Submit Request
               </button>
             </form>
           </div>
         </section>
       </main>
-
-      <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-3">
-        <a
-          href="https://wa.me/16475687520"
-          className="rounded-full bg-green-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-600"
-        >
-          WhatsApp
-        </a>
-        <a
-          href="tel:+16475687520"
-          className="rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700"
-        >
-          Call
-        </a>
-        <a
-          href="mailto:info@newlinkcleaning.com"
-          className="rounded-full bg-orange-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-orange-600"
-        >
-          Email
-        </a>
-        <a
-          href="https://privatemail.com"
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full bg-slate-800 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-black"
-        >
-          Mailbox
-        </a>
-      </div>
     </div>
   );
 }
