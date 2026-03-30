@@ -39,266 +39,107 @@ const reasons = [
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
+
+      {/* HEADER */}
       <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <div>
-            <h1 className="text-lg font-bold tracking-tight text-blue-700 sm:text-xl">
+            <h1 className="text-lg font-bold text-blue-700">
               New Link Cleaning Service
             </h1>
             <p className="text-xs text-orange-500">Clean • Fresh • Professional</p>
           </div>
 
           <div className="flex items-center gap-2 flex-wrap">
-            <a
-              href="#booking"
-              className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-            >
-              Book Now
+            <a href="#booking" className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white">
+              Book
             </a>
-            <a
-              href="tel:+16475687520"
-              className="rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-50"
-            >
+
+            <a href="tel:+16475687520" className="rounded-full border px-4 py-2 text-sm text-blue-700">
               Call
             </a>
-            <a
-              href="mailto:info@newlinkcleaning.com"
-              className="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-600"
-            >
+
+            <a href="mailto:info@newlinkcleaning.com" className="rounded-full bg-orange-500 px-4 py-2 text-sm text-white">
               Email
             </a>
-            <a
-              href="https://privateemail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
-            >
-              Open Mailbox
+
+            <a href="https://privateemail.com" target="_blank" rel="noreferrer" className="rounded-full border px-4 py-2 text-sm">
+              Mailbox
             </a>
           </div>
         </div>
       </header>
 
+      {/* MAIN */}
       <main>
-        <section className="mx-auto grid max-w-6xl gap-10 px-4 py-10 sm:px-6 md:grid-cols-2 md:items-center lg:px-8 lg:py-14">
-          <div className="order-2 md:order-1">
-            <div className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-              Trusted Cleaning Services in Ontario
-            </div>
-            <h2 className="mt-4 max-w-xl text-3xl font-bold leading-tight sm:text-4xl">
+        <section className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold">
               Trusted cleaning solutions for condominiums and commercial spaces
             </h2>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-slate-600 sm:text-base">
-              Led by Kert Roots, we deliver reliable, high-quality cleaning services with over 20 years of experience. We focus on clean results, professional service, and customer satisfaction.
+
+            <p className="mt-4 text-slate-600">
+              Led by Kert Roots, we deliver reliable, high-quality cleaning services with over 20 years of experience.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#booking"
-                className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-              >
-                Book by Form
+            <div className="mt-6 flex gap-3">
+              <a href="#booking" className="bg-blue-600 text-white px-5 py-2 rounded-full">
+                Book
               </a>
-              <a
-                href="https://wa.me/16475687520"
-                className="rounded-full bg-green-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-green-600"
-              >
+
+              <a href="https://wa.me/16475687520" className="bg-green-500 text-white px-5 py-2 rounded-full">
                 WhatsApp
-              </a>
-              <a
-                href="mailto:info@newlinkcleaning.com"
-                className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600"
-              >
-                Email Us
               </a>
             </div>
 
-            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
-              <h3 className="text-base font-bold text-blue-700">Why Clients Choose Us</h3>
-              <ul className="mt-3 space-y-2 text-sm text-slate-700">
-                {reasons.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-blue-600" />
-                    <span>{item}</span>
-                  </li>
+            <div className="mt-6 border p-4 rounded-xl bg-slate-50">
+              <h3 className="font-bold text-blue-700">Why Clients Choose Us</h3>
+              <ul className="mt-2 text-sm">
+                {reasons.map((r) => (
+                  <li key={r}>• {r}</li>
                 ))}
               </ul>
             </div>
           </div>
 
-          <div className="order-1 md:order-2">
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-              <img
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
-                alt="Professional cleaner mopping floor"
-                className="h-72 w-full rounded-3xl object-cover shadow-lg"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=900&q=80"
-                alt="Professional cleaner cleaning glass"
-                className="h-72 w-full rounded-3xl object-cover shadow-lg"
-              />
-            </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+              className="rounded-xl"
+            />
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 pb-8 sm:px-6 lg:px-8">
-          <div className="mb-5 text-center">
-            <h3 className="text-2xl font-bold text-blue-700">Our Services</h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Practical cleaning services for offices, condominiums, retail spaces, and residential moves.
-            </p>
-          </div>
+        {/* SERVICES */}
+        <section className="mx-auto max-w-6xl px-4 pb-10">
+          <h3 className="text-xl font-bold text-blue-700 text-center">Our Services</h3>
 
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <h4 className="text-base font-bold text-slate-900">{service.title}</h4>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{service.desc}</p>
+          <div className="grid md:grid-cols-3 gap-4 mt-4">
+            {services.map((s) => (
+              <div key={s.title} className="border p-4 rounded-xl">
+                <h4 className="font-bold">{s.title}</h4>
+                <p className="text-sm text-slate-600">{s.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="mx-auto max-w-4xl px-4 py-10 text-center">
-          <h3 className="text-2xl font-bold text-blue-700">Contact Us</h3>
+        {/* BOOKING */}
+        <section id="booking" className="mx-auto max-w-3xl px-4 py-10">
+          <h3 className="text-xl font-bold text-blue-700 text-center">Book Service</h3>
 
-          <p className="mt-4 text-sm text-slate-600">
-            Phone:{" "}
-            <a href="tel:+16475687520" className="font-semibold text-blue-600">
-              647-568-7520
-            </a>
-          </p>
+          <form className="mt-4 grid gap-3">
+            <input placeholder="Name" className="border p-2 rounded" />
+            <input placeholder="Phone" className="border p-2 rounded" />
+            <textarea placeholder="Details" className="border p-2 rounded" />
 
-          <p className="mt-2 text-sm text-slate-600">
-            Email:{" "}
-            <a
-              href="mailto:info@newlinkcleaning.com"
-              className="font-semibold text-blue-600"
-            >
-              info@newlinkcleaning.com
-            </a>
-          </p>
-
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <a
-              href="mailto:info@newlinkcleaning.com"
-              className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700"
-            >
-              Send Email
-            </a>
-
-            <a
-              href="https://privateemail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-slate-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800"
-            >
-              Open Mailbox
-            </a>
-          </div>
-        </section>
-
-        <section id="booking" className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl sm:p-8">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-blue-700">Book a Cleaning Service</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Monday – Saturday: 8:00 AM – 6:00 PM<br />Sunday: Closed
-              </p>
-            </div>
-
-            <form className="mt-6 grid gap-4">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <input
-                  type="text"
-                  placeholder="Full name"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone number"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <input
-                  type="date"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-                <input
-                  type="time"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <select className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500">
-                  <option>Select service</option>
-                  <option>Office Cleaning</option>
-                  <option>Commercial Cleaning</option>
-                  <option>Condominium Cleaning</option>
-                  <option>Post-Construction Cleaning</option>
-                  <option>Move-In / Move-Out Cleaning</option>
-                  <option>Floor Care</option>
-                  <option>Customized Cleaning Plans</option>
-                </select>
-                <input
-                  type="text"
-                  placeholder="Address"
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-                />
-              </div>
-
-              <textarea
-                placeholder="Additional details"
-                rows={5}
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500"
-              />
-
-              <button
-                type="submit"
-                className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-              >
-                Submit Request
-              </button>
-            </form>
-          </div>
+            <button className="bg-blue-600 text-white p-2 rounded">
+              Submit
+            </button>
+          </form>
         </section>
       </main>
 
-      <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-3">
-        <a
-          href="https://wa.me/16475687520"
-          className="rounded-full bg-green-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-600"
-        >
-          WhatsApp
-        </a>
-        <a
-          href="tel:+16475687520"
-          className="rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700"
-        >
-          Call
-        </a>
-        <a
-          href="mailto:info@newlinkcleaning.com"
-          className="rounded-full bg-orange-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-orange-600"
-        >
-          Email
-        </a>
-        <a
-          href="https://privateemail.com"
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full bg-slate-800 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-black"
-        >
-          Mailbox
-        </a>
-      </div>
     </div>
   );
 }
