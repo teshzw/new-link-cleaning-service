@@ -89,7 +89,7 @@ export default function App() {
               Trusted cleaning solutions for condominiums and commercial spaces
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-6 text-slate-600 sm:text-base">
-              Led by Kert Roots, we deliver reliable, high-quality cleaning services with over 20 years of experience. We focus on clean results, professional service, and customer satisfaction.
+              Led by Kert Roach, we deliver reliable, high-quality cleaning services with over 20 years of experience. We focus on clean results, professional service, and customer satisfaction.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
